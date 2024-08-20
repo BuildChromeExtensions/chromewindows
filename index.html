@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            width: 300px;
+            height: 500px;
+            background-color: #ccc;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        form {
+            border: 2px grey solid;
+            padding: 2px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h2>Chrome Windows</h2>
+        <hr />
+        <!-- URL -->
+        <label>URL</label>
+        <input type="url" name="url" placeholder="URL" required />
+
+        <!-- Position -->
+        <label>Left</label>
+        <input type="number" value="100" min="100" max="2000" name="x" placeholder="Left Position" required />
+        <label>Top</label>
+        <input type="number" value="100" min="100" max="2000" name="y" placeholder="Top Position" required />
+        <!-- Size -->
+        <label>Width</label>
+        <input type="number" value="400" min="100" max="2000" name="width" placeholder="Width" required />
+        <label>Height</label>
+        <input type="number" value="400" min="100" max="2000" name="height" placeholder="Height" required />
+
+        <div style="display: flex;">
+            <label>Focused</label>
+            <input type="checkbox" name="focused" />
+        </div>
+
+        <div style="display: flex;">
+            <label>Incognito</label>
+            <input type="checkbox" name="incognito" />
+        </div>
+
+
+        <!-- Window Type -->
+        <label>Window Type</label>
+        <select name="windowType" value="normal">
+            <option value="normal">Normal</option>
+            <option value="popup">Popup</option>
+            <!-- <option value="panel">Panel</option> -->
+        </select>
+
+        <!-- Window state -->
+        <label>Window State</label>
+        <select name="windowState" value="normal">
+            <option value="normal">Normal</option>
+            <option value="minimized">Minimized</option>
+            <option value="maximized">Maximized</option>
+            <option value="fullscreen">Fullscreen</option>
+        </select>
+        <br />
+
+
+        <button type="submit">Create Window</button>
+    </form>
+    <br/><br/>
+    <button id="window-count">Count Windows</button>
+
+
+    <script type="text/javascript" src="./popup.js">
+    </script>
+
+
+</body>
+
+</html>

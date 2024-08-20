@@ -1,0 +1,10 @@
+{
+    "name": "Chrome Windows",
+    "version": "1.0.0.0",
+    "description": "A chrome extensions should different way to make windows",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "Chrome Windows",
+        "default_popup": "index.html"
+    }
+}
